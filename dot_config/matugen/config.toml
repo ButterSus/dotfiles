@@ -1,0 +1,15 @@
+[config]
+
+[templates.mini-base16]
+input_path = '~/.config/matugen/templates/mini-base16.lua'
+output_path = '~/.config/nvim/colors/matugen-base16.lua'
+
+[templates.steam]
+input_path = '~/.config/matugen/templates/steam.css'
+output_path = '~/.config/AdwSteamGtk/custom.css'
+post_hook =  'adwaita-steam-gtk -i'
+
+[templates.telegram]
+input_path = '~/.config/matugen/templates/telegram.tdesktop-theme'
+output_path = '~/.config/matugen/output/telegram.tdesktop-theme'
+
