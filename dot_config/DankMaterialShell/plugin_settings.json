@@ -1,0 +1,9 @@
+{
+  "dankKDEConnect": {
+    "enabled": true,
+    "selectedDeviceId": "3a1ffd4610454d869e12bc1d7818cd12"
+  },
+  "vscodeLauncher": {
+    "enabled": false
+  }
+}
