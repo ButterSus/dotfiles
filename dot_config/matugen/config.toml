@@ -13,3 +13,7 @@ post_hook =  'adwaita-steam-gtk -i'
 input_path = '~/.config/matugen/templates/telegram.tdesktop-theme'
 output_path = '~/.config/matugen/output/telegram.tdesktop-theme'
 
+[templates.zathura]
+input_path = '~/.config/matugen/templates/zathurarc'
+output_path = '~/.config/zathura/zathurarc'
+
