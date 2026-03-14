@@ -139,7 +139,9 @@ binds {
     Super+Shift+A hotkey-overlay-title="Open Mullvad VPN" { spawn "mullvad-vpn"; }
     Super+Shift+C hotkey-overlay-title="Open Visual Studio Code" { spawn "code"; }
     Super+Shift+M hotkey-overlay-title="Open Player" { spawn "spotify-launcher"; }
+    Super+Shift+O hotkey-overlay-title="Open Obsidian" { spawn "obsidian"; }
     Super+Shift+S hotkey-overlay-title="Open Steam" { spawn "steam"; }
+    Super+Shift+Y hotkey-overlay-title="Open Discord" { spawn "vesktop"; }
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Tab repeat=false { toggle-overview; }
 }
