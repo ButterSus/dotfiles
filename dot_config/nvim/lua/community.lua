@@ -9,6 +9,7 @@ return {
   { import = "astrocommunity.pack.lua" },
 
   { import = "astrocommunity.recipes.cache-colorscheme" },
+  { import = "astrocommunity.recipes.vscode" },
 
   { import = "astrocommunity.git.neogit" },
 
