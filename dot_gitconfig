@@ -1,0 +1,5 @@
+[user]
+	email = buttersus@mail.ru
+	name = Eduard
+[pull]
+	rebase = true
