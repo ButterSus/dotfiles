@@ -12,12 +12,12 @@ binds {
     Mod+Shift+W hotkey-overlay-title="Create window rule" { spawn "dms" "ipc" "call" "window-rules" "toggle"; }
     Mod+V hotkey-overlay-title="Clipboard Manager" { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
     Mod+Y hotkey-overlay-title="File: Browse Wallpaper" { spawn "dms" "ipc" "call" "file" "browse" "wallpaper"; }
-    Super+D hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
-    Super+S hotkey-overlay-title="Theme: Toggle Light/Dark" { spawn "dms" "ipc" "call" "theme" "toggle"; }
-    Super+Shift+Z hotkey-overlay-title="Wallpaper: Previous" { spawn "dms" "ipc" "call" "wallpaper" "prev"; }
-    Super+X hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
-    Super+Z hotkey-overlay-title="Wallpaper: Next" { spawn "dms" "ipc" "call" "wallpaper" "next"; }
-    Super+grave hotkey-overlay-title="Dashboard: Overview" { spawn "dms" "ipc" "call" "dash" "open" "overview"; }
+    Mod+D hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    Mod+S hotkey-overlay-title="Theme: Toggle Light/Dark" { spawn "dms" "ipc" "call" "theme" "toggle"; }
+    Mod+Shift+Z hotkey-overlay-title="Wallpaper: Previous" { spawn "dms" "ipc" "call" "wallpaper" "prev"; }
+    Mod+X hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
+    Mod+Z hotkey-overlay-title="Wallpaper: Next" { spawn "dms" "ipc" "call" "wallpaper" "next"; }
+    Mod+grave hotkey-overlay-title="Dashboard: Overview" { spawn "dms" "ipc" "call" "dash" "open" "overview"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "decrement" "3"; }
     XF86AudioMicMute allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "micmute"; }
     XF86AudioMute allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "mute"; }
@@ -131,17 +131,29 @@ binds {
     Print { screenshot; }
     XF86Launch1 { screenshot; }
     Mod+Shift+E { quit; }
+    {{ if eq .chezmoi.hostname "msi-is-bad" -}}
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
-    Super+A hotkey-overlay-title="Open Telegram" { spawn "AyuGram"; }
-    Super+B hotkey-overlay-title="Open Browser" { spawn "firefox"; }
-    Super+E hotkey-overlay-title="Open File Explorer" { spawn "nautilus"; }
-    Super+P hotkey-overlay-title="Add/Remove Software" { spawn "pamac-manager"; }
-    Super+Shift+A hotkey-overlay-title="Open Mullvad VPN" { spawn "mullvad-vpn"; }
-    Super+Shift+C hotkey-overlay-title="Open Visual Studio Code" { spawn "code"; }
-    Super+Shift+M hotkey-overlay-title="Open Player" { spawn "spotify-launcher"; }
-    Super+Shift+O hotkey-overlay-title="Open Obsidian" { spawn "obsidian"; }
-    Super+Shift+S hotkey-overlay-title="Open Steam" { spawn "steam"; }
-    Super+Shift+Y hotkey-overlay-title="Open Discord" { spawn "vesktop"; }
+    Mod+A hotkey-overlay-title="Open Telegram" { spawn "AyuGram"; }
+    Mod+B hotkey-overlay-title="Open Browser" { spawn "firefox"; }
+    Mod+E hotkey-overlay-title="Open File Explorer" { spawn "nautilus"; }
+    Mod+P hotkey-overlay-title="Add/Remove Software" { spawn "pamac-manager"; }
+    Mod+Shift+A hotkey-overlay-title="Open Mullvad VPN" { spawn "mullvad-vpn"; }
+    Mod+Shift+C hotkey-overlay-title="Open Visual Studio Code" { spawn "code"; }
+    Mod+Shift+M hotkey-overlay-title="Open Player" { spawn "spotify-launcher"; }
+    Mod+Shift+O hotkey-overlay-title="Open Obsidian" { spawn "obsidian"; }
+    Mod+Shift+S hotkey-overlay-title="Open Steam" { spawn "steam"; }
+    {{- else if eq .chezmoi.hostname "chadtop" -}}
+    Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
+    Mod+A hotkey-overlay-title="Open Telegram" { spawn "AyuGram"; }
+    Mod+B hotkey-overlay-title="Open Browser" { spawn "firefox"; }
+    Mod+E hotkey-overlay-title="Open File Explorer" { spawn "nautilus"; }
+    Mod+P hotkey-overlay-title="Add/Remove Software" { spawn "pamac-manager"; }
+    Mod+Shift+A hotkey-overlay-title="Open Mullvad VPN" { spawn "mullvad-vpn"; }
+    Mod+Shift+C hotkey-overlay-title="Open Visual Studio Code" { spawn "code"; }
+    Mod+Shift+D { spawn "rnote"; }
+    Mod+Shift+M hotkey-overlay-title="Open Player" { spawn "spotify-launcher"; }
+    Mod+Shift+S hotkey-overlay-title="Open Steam" { spawn "steam"; }
+    {{- end }}
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Tab repeat=false { toggle-overview; }
 }
