@@ -131,19 +131,20 @@ binds {
     Print { screenshot; }
     XF86Launch1 { screenshot; }
     Mod+Shift+E { quit; }
-    {{ if eq .chezmoi.hostname "msi-is-bad" -}}
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
+    {{ if eq .chezmoi.hostname "msi-is-bad" -}}
     Mod+A hotkey-overlay-title="Open Telegram" { spawn "AyuGram"; }
     Mod+B hotkey-overlay-title="Open Browser" { spawn "firefox"; }
     Mod+E hotkey-overlay-title="Open File Explorer" { spawn "nautilus"; }
     Mod+P hotkey-overlay-title="Add/Remove Software" { spawn "pamac-manager"; }
     Mod+Shift+A hotkey-overlay-title="Open Mullvad VPN" { spawn "mullvad-vpn"; }
     Mod+Shift+C hotkey-overlay-title="Open Visual Studio Code" { spawn "code"; }
+    Mod+Shift+D hotkey-overlay-title="Open Rnote" { spawn "rnote"; }
     Mod+Shift+M hotkey-overlay-title="Open Player" { spawn "spotify-launcher"; }
     Mod+Shift+O hotkey-overlay-title="Open Obsidian" { spawn "obsidian"; }
     Mod+Shift+S hotkey-overlay-title="Open Steam" { spawn "steam"; }
+    Mod+Shift+Y hotkey-overlay-title="Open Discord" { spawn "vesktop"; }
     {{- else if eq .chezmoi.hostname "chadtop" -}}
-    Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Mod+A hotkey-overlay-title="Open Telegram" { spawn "AyuGram"; }
     Mod+B hotkey-overlay-title="Open Browser" { spawn "firefox"; }
     Mod+E hotkey-overlay-title="Open File Explorer" { spawn "nautilus"; }
@@ -153,6 +154,7 @@ binds {
     Mod+Shift+D { spawn "rnote"; }
     Mod+Shift+M hotkey-overlay-title="Open Player" { spawn "spotify-launcher"; }
     Mod+Shift+S hotkey-overlay-title="Open Steam" { spawn "steam"; }
+    Mod+Shift+Y hotkey-overlay-title="Open Discord" { spawn "vesktop"; }
     {{- end }}
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Tab repeat=false { toggle-overview; }
