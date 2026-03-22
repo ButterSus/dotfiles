@@ -18,4 +18,5 @@ return {
 
   -- Colorschemes
   { import = "astrocommunity.colorscheme.mini-base16" },
+  { import = "astrocommunity.colorscheme.gruvbox-baby" },
 }
