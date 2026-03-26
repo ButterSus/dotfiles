@@ -30,7 +30,7 @@ set completion-fg           "{{colors.primary.default.hex}}"
 set notification-bg         "{{colors.on_primary.default.hex}}"
 set notification-fg         "{{colors.primary.default.hex}}"
 
-set recolor                 "true"
+set recolor                 "false"
 set recolor-lightcolor      "{{colors.on_primary.default.rgba | set_alpha: 1.0}}"
 set recolor-darkcolor       "{{colors.primary.default.hex}}"
 set recolor-reverse-video   "true"
@@ -48,6 +48,9 @@ set adjust-open width
 
 " Typography
 set font "FiraCode Nerd Font 12"
+
+"Scroll
+set smooth-scroll true
 
 " -----------------------------------------------------------------------------
 " Zathura mappings
